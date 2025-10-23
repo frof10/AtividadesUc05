@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exemplo - Aplicação Desktop</title>
+    <style> 
+        body{
+            background-color: #acdeb2;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        label{
+            font-size: 16px;
+            font-family: Arial, Helvetica, sans-serif; 
+            border-radius: 20px;       
+        }
+        button{
+            border-radius: 50px;
+            background-color: blue
+        }
+        input{
+            border-radius: 20px;
+        }
+    </style>
+</head>
+<body>
+    
+    <h1> Teste </h1>
+
+    <label for="nome"> Nome: </label>
+    <input type="text" id="nome" placeholder="Insira o seu nome">
+    <button id="botao" onclick="pegarNome()">Enviar</button>
+    <br><br>
+    <p id="texto"></p>
+    <br><br>
+
+    <label for = "num"> Número: </label>
+    <input type="text" id ="numero1" placeholder="Digite um numero">
+    <button id="botaoNumero" onclick="verificarNumero()">Enviar</button>
+    <br><br>
+    <p id="texto2"></p>
+    
+    
+    <script>
+        function pegarNome(){
+            let conteudo = document.getElementById('nome').value
+            alert(`Olá ${conteudo}`)
+            document.getElementById('nome').value = ""
+            document.getElementById('texto').innerHTML = `Olá, ${conteudo}!!!`
+        }
+
+        function verificarNumero(){
+            let numero = document.getElementById('numero1').value
+            if(numero > 0){
+                document.getElementById('texto2').innerHTML = 'Positivo'
+            }else{
+                document.getElementById('texto2').innerHTML = 'Negativo'
+            }
+        }
+    </script>
+
+</body>
+</html>

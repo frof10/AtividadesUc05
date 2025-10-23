@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        button{
+            background-color: grey;
+            color: black;
+            border-radius: 15px;
+            font-family: 'Courier New', Courier, monospace;
+        }
+        body{
+            background-color: burlywood;
+        }
+        label{
+            color: black;
+            font-family: 'Courier New', Courier, monospace;
+        }
+        input{
+            color:grey;
+            font-family: 'Courier New', Courier, monospace;
+            border-radius: 15px;
+        }
+
+    </style>
+</head>
+<body>
+    <h1>Calculadora de notas</h1>
+    <label for="atividade">Atividade: </label>
+    <input type="number" id="nota01" placeholder="Digite a nota" >
+    <br><br>
+    <label for="prova">Prova: </label>
+    <input type="number" id="nota02" placeholder="Digite a nota"> 
+    <br><br>
+    <button id="botao03" onclick="calcularNota()">Calcular</button>
+    <p id="resultado"></p>
+
+    <script>
+        function calcularNota(){
+        
+        let nota01 = document.getElementById('nota01').value *0.4
+        let nota02 = document.getElementById('nota02').value *0.6
+            if(nota01 == "" && nota02 == "", nota01 == "" || nota02 == ""){
+                alert('Campo em branco, Digite um valor.')
+                return false;
+            }
+        let media = document.getElementById('resultado').innerHTML = (nota01+nota02).toFixed(2)
+        }
+    </script>
+</body>
+</html>

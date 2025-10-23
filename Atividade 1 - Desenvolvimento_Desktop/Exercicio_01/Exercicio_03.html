@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Conversor de temperatura</title>
+    <style>
+        button{
+            background-color: grey;
+            color: black;
+            border-radius: 15px;
+            font-family: 'Courier New', Courier, monospace;
+        }
+        body{
+            background-color: burlywood;
+        }
+        label{
+            color: black;
+            font-family: 'Courier New', Courier, monospace;
+        }
+        input{
+            color:grey;
+            font-family: 'Courier New', Courier, monospace;
+            border-radius: 15px;
+        }
+
+    </style>
+</head>
+<body>
+    <h1>Conversor de temperatura</h1>
+    <label for="celsius">Celsius: </label>
+    <input type="text" id="celsius" placeholder="Digite a temperatura em Celsius" >
+    <br><br>
+    <button id="botaoF" onclick="calculoFah()">Fahrenheit</button>
+    <button id="botaoK" onclick="calculokel()">Kelvin</button>
+    <br><br>
+    <p id="resultado1"></p>
+
+    <script>
+        function calculokel(){
+            let cel = document.getElementById('celsius').value
+            if(cel === ""){
+                alert('Campo em branco, Digite um valor.');
+                return false;
+            }
+            let calculo = document.getElementById('resultado1').innerHTML = cel+273.15
+        }
+
+        function calculoFah(){
+            let cel = document.getElementById('celsius').value
+            if(cel === ""){
+                alert('Campo em branco, Digite um valor.');
+                return false;
+            }
+            let calculo = document.getElementById('resultado1').innerHTML = (cel*9/5)+32
+        }
+    </script>
+</body>
+</html>

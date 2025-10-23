@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>verificador de Números</title>
+
+    <style>
+        button{
+            background-color: grey;
+            color: black;
+            border-radius: 15px;
+            font-family: 'Courier New', Courier, monospace;
+        }
+        body{
+            background-color: burlywood;
+        }
+        label{
+            color: black;
+            font-family: 'Courier New', Courier, monospace;
+        }
+        input{
+            color:grey;
+            font-family: 'Courier New', Courier, monospace;
+            border-radius: 15px;
+        }
+
+    </style>
+</head>
+<body>
+    <h1>Verificador de números</h1>
+    <label for="nome">Numero: </label>
+    <input type="text" id="entradaNumero" placeholder="Digite um número" >
+    <button id="limpar" onclick="limparCampo()">Limpar</button>
+    <br><br>
+    <button id="botao01" onclick="verificarNumero()">Verificar</button>
+    <br><br>
+    <button id="botao02" onclick="imparPar()">Impar ou par</button>
+    <br><br>
+    <p id="text01"></p>
+    <p id="text02"></p>
+
+    <script>
+        function limparCampo(){
+            document.getElementById('entradaNumero').value = ""
+        }
+        function verificarNumero(){
+            let numero = document.getElementById('entradaNumero').value
+                if(numero === ""){
+                    alert('Campo em branco, Digite um valor.')
+                    return false;                  
+                }if (numero > 0){
+                    document.getElementById('text01').innerHTML = 'O número é Positivo'
+                }else{
+                    document.getElementById('text01').innerHTML = 'O número é Negativo'
+                }
+        }
+
+        function imparPar(){
+            let numero = document.getElementById('entradaNumero').value
+                if(numero === ""){
+                    alert('Campo em branco, Digite um valor.')
+                    return false;                  
+                }if(numero % 2 == 0){
+                    document.getElementById('text02').innerHTML = 'O número é Par'
+                }else{
+                    document.getElementById('text02').innerHTML = 'O número é Impar'
+                }
+        }
+    </script>
+</body>
+</html>

@@ -7,6 +7,7 @@ const criarJanela = () => {
     title:"Exemplo - Aplicação Desktop"
     })
     janela.loadFile('index.html');
+    
 };
 
 app.whenReady().then(() => {

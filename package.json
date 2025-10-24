@@ -1,0 +1,26 @@
+{
+  "dependencies": {
+    "electron": "^38.4.0"
+  },
+  "name": "atividadesuc05",
+  "version": "1.0.0",
+  "type": "module",
+  "description": "Atividades de Desenvolvimento de aplicações para desktop.",
+  "main": "index.js",
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "Exercicio_01.html"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/frof10/AtividadesUc05.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/frof10/AtividadesUc05/issues"
+  },
+  "homepage": "https://github.com/frof10/AtividadesUc05#readme"
+}
